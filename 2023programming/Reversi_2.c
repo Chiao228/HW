@@ -45,17 +45,18 @@ int new_step(int x, int y){
                     while(new_x >= 0 && new_x < 8 && new_y >= 0 && new_y < 8 && chess[new_x][new_y] == find_color){
                         new_x += dx;
                         new_y += dy;
-                        if(chess[new_x][new_y] == 0){
-                            next[new_x][new_y] = color;
-                            if(i == x && j == y){
+                         if(chess[new_x][new_y] == 0){
+                             next[new_x][new_y] = color;
+                             if(i == x && j == y){
                                 printf("(%d,%d)",new_x ,new_y);
-                            }
-                        }
+                             }
+                         }
                     }
                 }
              }
         }
     }
+    printf("沒位可下");
 }
 
 void print_can_move(){
